@@ -14,12 +14,11 @@ public class MainApp {
 
         ProductReport productReport = new ProductReport();
 
-        productReport.priceOfProduct(list,Type.MOBILE);
-//        productReport.priceOfProduct(list,Type.AUDIO);
-//        productReport.priceOfProduct(list,Type.TV);
+        int price = productReport.priceOfProduct(list,Type.MOBILE);
+        System.out.println("Price of products: " + price);
 
-        productReport.exOfProduct(list,Type.AUDIO);
-
+        int amount = productReport.exOfProduct(list,Type.AUDIO);
+        System.out.println("Amount of existence products : " + amount);
 
 
     }

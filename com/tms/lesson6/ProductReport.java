@@ -2,15 +2,20 @@ package com.tms.lesson6;
 
 public class ProductReport {
 
-    public void priceOfProduct(Product[] list, Type type) {
-        for (Product product : list) {
-            if (type == product.getType()) {
-                System.out.println(product.getPrice());
+    public int priceOfProduct(Product[] list, Type type) {
+        int i = 0;
+        int price= 0;
+        for (; i < list.length;i++) {
+            if (type == list[i].getType()) {
+               int val = list[i].getPrice();
+               price += val;
             }
+
         }
+        return price;
     }
 
-    public void exOfProduct(Product[] list, Type type) {
+    public int exOfProduct(Product[] list, Type type) {
         int i = 1;
         int sum = 0;
         for (Product product : list) {
@@ -18,6 +23,6 @@ public class ProductReport {
                 sum +=i;
             }
         }
-        System.out.println(sum);
+        return sum;
     }
 }
