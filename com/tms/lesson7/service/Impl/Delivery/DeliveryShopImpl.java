@@ -5,8 +5,4 @@ import com.tms.lesson7.service.DeliverOrder;
 
 public class DeliveryShopImpl implements DeliverOrder {
 
-    @Override
-    public void getInfoAddress(Order order) {
-        DeliverOrder.super.getInfoAddress(order);
-    }
 }
