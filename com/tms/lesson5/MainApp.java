@@ -4,7 +4,7 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Student hanna = new Student("Hanna","MacLoud");
+        Student hanna = new Student("Hanna", "MacLoud");
 
         String fullNameHanna = hanna.fullname();
 
@@ -16,7 +16,7 @@ public class MainApp {
         int lessonHanna = 10;
         hanna.visit(hanna.lastname, lessonHanna);
 
-        Student max = new Student("Max","O'Connor", 28);
+        Student max = new Student("Max", "O'Connor", 28);
 
         String fullNameMax = max.fullname();
 
