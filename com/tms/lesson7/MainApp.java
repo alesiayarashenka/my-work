@@ -3,11 +3,11 @@ package com.tms.lesson7;
 import com.tms.lesson7.domain.Order;
 import com.tms.lesson7.service.DeliverOrder;
 import com.tms.lesson7.service.GetOrder;
-import com.tms.lesson7.service.Impl.CreateDishes.CreateDishesServiceImpl;
-import com.tms.lesson7.service.Impl.Delivery.DeliveryHomeImpl;
-import com.tms.lesson7.service.Impl.MainService.MainServiceImpl;
-import com.tms.lesson7.service.Impl.Ordrer.OrderByPhoneImpl;
-import com.tms.lesson7.service.Impl.SaveOrder.ServiceDataBaseImpl;
+import com.tms.lesson7.service.impl.createDishes.CreateDishesServiceImpl;
+import com.tms.lesson7.service.impl.delivery.DeliveryHomeImpl;
+import com.tms.lesson7.service.impl.mainService.MainServiceImpl;
+import com.tms.lesson7.service.impl.ordrer.OrderByPhoneImpl;
+import com.tms.lesson7.service.impl.saveOrder.ServiceDataBaseImpl;
 import com.tms.lesson7.service.MainSeviceOrder;
 
 public class MainApp {

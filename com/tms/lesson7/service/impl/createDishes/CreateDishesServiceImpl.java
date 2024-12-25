@@ -1,4 +1,4 @@
-package com.tms.lesson7.service.Impl.CreateDishes;
+package com.tms.lesson7.service.impl.createDishes;
 
 import com.tms.lesson7.domain.Order;
 import com.tms.lesson7.service.ProcessCreateDishes;

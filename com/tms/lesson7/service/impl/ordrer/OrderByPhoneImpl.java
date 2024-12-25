@@ -1,4 +1,4 @@
-package com.tms.lesson7.service.Impl.Ordrer;
+package com.tms.lesson7.service.impl.ordrer;
 
 import com.tms.lesson7.domain.Order;
 import com.tms.lesson7.service.GetOrder;
