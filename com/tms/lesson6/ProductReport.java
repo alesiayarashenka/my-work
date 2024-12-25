@@ -19,7 +19,7 @@ public class ProductReport {
         int i = 1;
         int sum = 0;
         for (Product product : list) {
-            if ((type == product.getType() && product.isExistence()) == true) {
+            if ((type == product.getType() && product.isExistence())) {
                 sum +=i;
             }
         }
