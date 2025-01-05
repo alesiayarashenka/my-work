@@ -8,9 +8,25 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Product product_1 = new AudioProduct("Marshall", 300, 12);
-        Product product_2 = new PhoneProduct("Nokia", 400, 10);
-        Product product_3 = new TvProduct("Philips", 800, 8);
+        Product product_1 = new Product("Marshall", 300, 12){
+            @Override
+            public String toString() {
+                return getProductName();
+            }
+        };
+
+        Product product_2 = new Product("Nokia", 400, 10){
+            @Override
+            public String toString() {
+                return getProductName();
+            }
+        };
+        Product product_3 = new Product("Philips", 800, 8){
+            @Override
+            public String toString() {
+                return getProductName();
+            }
+        };
 
         List<Product> products = new ArrayList<>();
 
@@ -26,7 +42,12 @@ public class MainApp {
 
         productCollection.getAmount(products);
 
-        Product product_4 = new HomeProduct("Lamp", 150, 30);
+        Product product_4 = new Product("Lamp", 150, 30){
+            @Override
+            public String toString() {
+                return getProductName();
+            }
+        };
 
         products.add(2, product_4);
 

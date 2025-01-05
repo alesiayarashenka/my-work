@@ -25,4 +25,5 @@ public class Product {
     public int getAmount() {
         return amount;
     }
+
 }
