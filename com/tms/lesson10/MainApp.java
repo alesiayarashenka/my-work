@@ -8,52 +8,41 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Product product_1 = new Product("Marshall", 300, 12){
-            @Override
-            public String toString() {
-                return getProductName();
-            }
-        };
+        Product product1 = new Product("Marshall", 300, 12);
 
-        Product product_2 = new Product("Nokia", 400, 10){
-            @Override
-            public String toString() {
-                return getProductName();
-            }
-        };
-        Product product_3 = new Product("Philips", 800, 8){
-            @Override
-            public String toString() {
-                return getProductName();
-            }
-        };
+        Product product2 = new Product("Nokia", 400, 10);
+
+        Product product3 = new Product("Philips", 800, 8);
 
         List<Product> products = new ArrayList<>();
 
         ProductCollectionService productCollection = new ProductCollectionService();
 
-        products.add(product_1);
-        products.add(product_2);
-        products.add(product_3);
+        products.add(product1);
+        products.add(product2);
+        products.add(product3);
 
-        productCollection.getName(products, product_3.getProductName());
+        var result = productCollection.getName(products, String.valueOf(product3));
 
-        productCollection.getPrice(products, 350);
+        System.out.println("Product " + result + " was found");
 
-        productCollection.getAmount(products);
+        int priceValue = 350;
 
-        Product product_4 = new Product("Lamp", 150, 30){
-            @Override
-            public String toString() {
-                return getProductName();
-            }
-        };
+        var result1 = productCollection.getPrice(products, priceValue);
 
-        products.add(2, product_4);
+        System.out.println("The product price of " + result1 + " is more expensive then " + priceValue);
+
+        var result3 = productCollection.getAmount(products);
+
+        System.out.println("The amount of all products is  " + result3);
+
+        Product product4 = new Product("Lamp", 150, 30);
+
+        products.add(2, product4);
 
         System.out.println("Amount of elements in new collection is " + products.size());
 
-        System.out.println("The new element " + products.get(2) + " in collection is added: " + products.contains(product_4));
+        System.out.println("The new element " + products.get(2) + " in collection is added: " + products.contains(product4));
 
         List<Product> sublist = products.subList(0, 3);
         System.out.println("The list contains last product: " + sublist);

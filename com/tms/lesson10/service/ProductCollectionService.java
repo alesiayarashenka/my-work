@@ -2,32 +2,37 @@ package com.tms.lesson10.service;
 
 import com.tms.lesson10.domain.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductCollectionService {
 
-    public void getName(List<Product> products, String val) {
-        for (Product product : products) {
-            if (val == product.getProductName()) {
-                System.out.println("Product " + product.getProductName() + " was found");
+    public List<Product> getName(List<Product> products, String val) {
+        List<Product> dest = new ArrayList<>();
+        for (Product p : products) {
+            if (p.getProductName().equals(val)) {
+                dest.add(p);
             }
         }
+        return dest;
     }
 
-    public void getPrice(List<Product> products, int val) {
+    public List<Product> getPrice(List<Product> products, int val) {
+        List<Product> dest = new ArrayList<>();
         for (Product product : products) {
-            if (val < product.getPrice()) {
-                System.out.println("The product price of " + product.getProductName() + " is more expensive then " + val);
+            if (product.getPrice() > val) {
+                dest.add(product);
             }
         }
+        return dest;
     }
 
-    public void getAmount(List<Product> products) {
-        int i = 0;
+    public int getAmount(List<Product> products) {
+        int amount = 0;
         for (Product product : products) {
-            i += product.getAmount();
+            amount += product.getAmount();
         }
-        System.out.println("The amount of all products is  " + i);
+        return amount;
     }
 }
 
