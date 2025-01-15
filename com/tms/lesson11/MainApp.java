@@ -35,36 +35,23 @@ public class MainApp {
         var res = userService.reapedNumber(listNumbers);
         System.out.println("The list with reaped numbers: " + res);
 
-        //---Выведем список имен без дубликатов
-        User user1 = new User("Olya", 28);
-        User user2 =new User("Kolya", 24);
-        User user3 =new User("Valya", 33);
-        User user4 =new User("Olya", 40);
-        User user5 =new User("Hanna", 18);
-        User user6 =new User("Kolya", 25);
+        //---Список пользователей в порядке увеличения возраста
+        List<User> listAge = new ArrayList<>();
 
-        Map<String,User> userMap = new HashMap<>();
+        listAge.add(new User("Olya", 28));
+        listAge.add(new User("Kolya", 24));
+        listAge.add(new User("Valya", 33));
+        listAge.add(new User("Olya", 40));
+        listAge.add(new User("Hanna", 18));
+        listAge.add(new User("Kolya", 25));
 
-        userMap.put(user1.getUserName(), user1);
-        userMap.put(user2.getUserName(), user2);
-        userMap.put(user3.getUserName(), user3);
-        userMap.put(user4.getUserName(), user4);
-        userMap.put(user5.getUserName(), user5);
-        userMap.put(user6.getUserName(), user6);
+        var resultAge = userService.increaseAge(listAge);
 
-        var allUser = userMap.keySet();
-        System.out.println(allUser);
+        System.out.println("List of users by age: " + resultAge);
 
-        //---Выведем список пользователей в порядке увеличения возраста
-        Set<User> set = new TreeSet<>();
-        set.add(new User("Olya", 28));
-        set.add(new User("Kolya", 24));
-        set.add(new User("Valya", 33));
-        set.add(new User("Olya", 40));
-        set.add(new User("Hanna", 18));
-        set.add(new User("Kolya", 25));
-
-        System.out.println(set);
+        //---Список пользователей без дубликатов
+        var listdouble = userService.withoutDouble(listAge);
+        System.out.println("List of users without duplicates: " + listdouble);
 
     }
 }
