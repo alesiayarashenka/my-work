@@ -18,7 +18,7 @@ public class CollectionService {
         return mapList;
     }
 
-    public Set<User> increaseAge(List<User> source) {
+    public Set<User> sortByAge(List<User> source) {
         Set<User> set = new TreeSet<>();
         for (User s : source) {
             set.add(s);
@@ -26,7 +26,7 @@ public class CollectionService {
         return set;
     }
 
-    public Set<String> withoutDouble(List<User> source) {
+    public Set<String> sortWithoutDouble(List<User> source) {
         Set<String> set = new HashSet<>();
         for (User s : source) {
             set.add(s.getUserName());

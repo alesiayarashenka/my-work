@@ -45,12 +45,12 @@ public class MainApp {
         listAge.add(new User("Hanna", 18));
         listAge.add(new User("Kolya", 25));
 
-        var resultAge = userService.increaseAge(listAge);
+        var resultAge = userService.sortByAge(listAge);
 
         System.out.println("List of users by age: " + resultAge);
 
         //---Список пользователей без дубликатов
-        var listdouble = userService.withoutDouble(listAge);
+        var listdouble = userService.sortWithoutDouble(listAge);
         System.out.println("List of users without duplicates: " + listdouble);
 
     }
