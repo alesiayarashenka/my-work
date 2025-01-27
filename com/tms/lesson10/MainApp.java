@@ -22,17 +22,17 @@ public class MainApp {
         products.add(product2);
         products.add(product3);
 
-        var result = productCollection.getName(products, String.valueOf(product3));
+        var result = productCollection.searchByProduct(products, String.valueOf(product3));
 
         System.out.println("Product " + result + " was found");
 
         int priceValue = 350;
 
-        var result1 = productCollection.getPrice(products, priceValue);
+        var result1 = productCollection.searchByPrice(products, priceValue);
 
         System.out.println("The product price of " + result1 + " is more expensive then " + priceValue);
 
-        var result3 = productCollection.getAmount(products);
+        var result3 = productCollection.countAmountOfProducts(products);
 
         System.out.println("The amount of all products is  " + result3);
 

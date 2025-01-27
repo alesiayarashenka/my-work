@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ProductCollectionService {
 
-    public List<Product> getName(List<Product> products, String val) {
+    public List<Product> searchByProduct(List<Product> products, String val) {
         List<Product> dest = new ArrayList<>();
         for (Product p : products) {
             if (p.getProductName().equals(val)) {
@@ -17,7 +17,7 @@ public class ProductCollectionService {
         return dest;
     }
 
-    public List<Product> getPrice(List<Product> products, int val) {
+    public List<Product> searchByPrice(List<Product> products, int val) {
         List<Product> dest = new ArrayList<>();
         for (Product product : products) {
             if (product.getPrice() > val) {
@@ -27,7 +27,7 @@ public class ProductCollectionService {
         return dest;
     }
 
-    public int getAmount(List<Product> products) {
+    public int countAmountOfProducts(List<Product> products) {
         int amount = 0;
         for (Product product : products) {
             amount += product.getAmount();
