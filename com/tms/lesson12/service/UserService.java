@@ -13,7 +13,7 @@ public class UserService {
             return collect;
             }
 
-        public List<String> increaseAge(List<User> source) {
+        public List<String> sortByAge(List<User> source) {
             List<String> collect = source.stream()
                     .sorted(Comparator.comparingDouble(User::getUserAge))
                     .toList()
@@ -22,7 +22,7 @@ public class UserService {
             return collect;
         }
 
-        public Set<String> withoutDouble(List<User> source) {
+        public Set<String> sortWithoutDouble(List<User> source) {
             Set<String> collect = source.stream()
                     .map(User::getUserName)
                     .collect(Collectors.toSet());
